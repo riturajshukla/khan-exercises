@@ -2110,6 +2110,7 @@ function updateData( data ) {
 
 		// Don't show label if not enough room
 		labelWidthRequired = 20,
+		maxScore = data.streak,
 
 		// Don't show accumulation stats higher than 100 to stop grinding behavior,
 		// and don't show labels if there isn't room in the bar to render them.
@@ -2168,7 +2169,7 @@ function updateData( data ) {
 		// assign the streak bar a class appropriate to the display mode
 		jQuery(".streak-bar").addClass(data.streak_display);
 		
-		console.log("data:",data)
+		console.log("data:",data);
 		
 		// some easing functions
 		jQuery.extend( jQuery.easing, {
